@@ -1,7 +1,9 @@
 import React from "react";
 
-function Display() {
-  return <input type="text" className="display" />;
+function Display({ displayValue }) {
+  return (
+    <input type="text" className="display" value={displayValue} readOnly />
+  );
 }
 
 export default Display;

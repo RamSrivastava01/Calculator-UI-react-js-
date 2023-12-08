@@ -1,6 +1,9 @@
 import React from "react";
 import "../../src/App.css";
-function ButtonsContainer() {
+function ButtonsContainer({ onButtonClick }) {
+  //   const handleBtnClick = () => {
+  //     console.log(`${btn} clicked`);
+  //   };
   const buttonList = [
     "C",
     "1",
@@ -13,6 +16,7 @@ function ButtonsContainer() {
     "6",
     "*",
     "7",
+    "8",
     "/",
     "=",
     "9",
@@ -22,7 +26,9 @@ function ButtonsContainer() {
   return (
     <div className="buttonsContainer">
       {buttonList.map((btn) => (
-        <button className="btn">{btn}</button>
+        <button key={btn} className="btn" onClick={() => onButtonClick(btn)}>
+          {btn}
+        </button>
       ))}
     </div>
   );

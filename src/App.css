@@ -22,4 +22,9 @@
   font-weight: bolder;
   font-size: 19px;
   border: 1px solid black;
+  box-shadow: silver 3px 3px;
+}
+
+.btn:hover {
+  background-color: rgba(157, 221, 221, 0.785);
 }
